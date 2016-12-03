@@ -1,7 +1,4 @@
 ---
-# tasks file for ansible-role-homebrew
-
----
 # Homebrew setup prerequisites.
 - name: Get current account's username.
   shell: whoami
