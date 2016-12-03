@@ -1,6 +1,6 @@
 galaxy_info:
   author: Brian Macauley
-  description: your description
+  description: Installs Homebrew on a Mac and installs packages, taps, and cask apps
   company: ---
   license: MIT
   min_ansible_version: 2.0
@@ -9,7 +9,7 @@ galaxy_info:
       versions:
       - all
 
-  galaxy_tags: []
+  galaxy_tags:
     - development
     - system
     - packaging
