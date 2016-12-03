@@ -3,6 +3,9 @@ ansible-role-homebrew
 
 Installs Homebrew on a Mac and  installs packages, taps, and cask apps
 
+![Build status](https://travis-ci.org/bmacauley/ansible-role-homebrew.svg?branch=master)
+
+
 Requirements
 ------------
 
