@@ -97,8 +97,12 @@
 #   when: "'{{ item }}' not in homebrew_cask_list.stdout"
 
 
-- name: Install configured cask applications using homebrew_cask (requires 2.2)
-  homebrew_cask: name = {{ item }} state = present install_options = 'appdir={{ homebrew_cask_appdir }}'
+# (requires 2.2)
+- name: Install configured cask applications using homebrew_cask 
+  homebrew_cask: 
+    name: "{{ item }}"
+    state: present
+    install_options: 'appdir={{ homebrew_cask_appdir }}'
   with_items: "{{ homebrew_cask_apps }}"
 
 - name: Check for Brewfile.
