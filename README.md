@@ -1,7 +1,7 @@
 ansible-role-homebrew
 =====================
 
-Installs Homebrew on a Mac and  installs packages, taps, and cask apps
+Ansible role to install Homebrew on a Mac and to configure packages, taps, and cask apps with supplied variables
 
 ![Build status](https://travis-ci.org/bmacauley/ansible-role-homebrew.svg?branch=master)
 
@@ -15,28 +15,61 @@ Role Variables
 --------------
 default values (see defaults/main.yml):
 
+```
+homebrew_repo: https://github.com/Homebrew/brew             # homebrew github repo
 
-Dependencies
-------------
+homebrew_prefix: /usr/local                                 
+homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"     
+homebrew_brew_bin_path: /usr/local/bin
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+homebrew_installed_packages:                                # homebrew packages
+  - ssh-copy-id
+  - pv
+
+homebrew_upgrade_all_packages: no                           # upgrade homebrew packages
+
+homebrew_taps:                                              # homebrew taps
+  - homebrew/core
+  - caskroom/cask
+
+homebrew_cask_apps:                                         # homebrew casks
+  - firefox
+
+homebrew_cask_appdir: /Applications                         #homebrew cask install dir
+
+homebrew_use_brewfile: true                                 # use a brewfile to install homebrew packages and casks
+homebrew_brewfile_dir: '~'
+```
+
+
+
+
+
+Example Playbook
+----------------
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: localhost
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: ansible-role-homebrew }
+
+Dependencies
+------------
+
+None
+
 
 License
 -------
 
-MIT
+[MIT]()
 
-Author Information
-------------------
+Author 
+------
 
-Brian Macauley
+[Brian Macauley]()  bmacauley@deloitte.co.uk
 # ansible-role-homebrew
