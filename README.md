@@ -71,5 +71,5 @@ License
 Author 
 ------
 
-[Brian Macauley]()  bmacauley@deloitte.co.uk
-# ansible-role-homebrew
+Brian Macauley
+
