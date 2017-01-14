@@ -44,10 +44,6 @@ homebrew_brewfile_dir: '~'
 
 
 
-
-Example Playbook
-----------------
-
 Example Playbook
 ----------------
 
@@ -71,5 +67,6 @@ License
 Author 
 ------
 
-Brian Macauley
+[Brian Macauley](https://github.com/bmacauley)  
+bmacauley@deloitte.co.uk
 
