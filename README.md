@@ -62,7 +62,7 @@ None
 License
 -------
 
-[MIT]()
+[MIT](https://github.com/bmacauley/ansible-role-homebrew/blob/master/LICENSE)
 
 Author 
 ------
