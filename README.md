@@ -67,7 +67,7 @@ Including an example of how to use your role (for instance, with variables passe
 Dependencies
 ------------
 elliotweiser.osx-command-line-tools
-geerlingguy.homebrew
+
 
 
 License
