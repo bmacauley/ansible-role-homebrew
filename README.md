@@ -15,31 +15,43 @@ Role Variables
 default values (see defaults/main.yml):
 
 ```
-homebrew_repo: https://github.com/Homebrew/brew             # homebrew github repo
+# homebrew github repo
+homebrew_repo: https://github.com/Homebrew/brew
 
+# homebrew install path
 homebrew_prefix: /usr/local
 homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
+
+# homebrew binary path
 homebrew_brew_bin_path: /usr/local/bin
 
-homebrew_installed_packages:                                # homebrew packages
+# homebrew packages to install
+homebrew_installed_packages:
   - ssh-copy-id
   - pv
 
-homebrew_upgrade_all_packages: no                           # upgrade homebrew packages
+# upgrade homebrew  packages
+homebrew_upgrade_all_packages: no
 
-homebrew_taps:                                              # homebrew taps
+# homebrew taps to install
+homebrew_taps:
   - homebrew/core
   - caskroom/cask
 
-homebrew_cask_apps:                                         # homebrew casks
+# homebrew casks to install
+homebrew_cask_apps:
   - firefox
 
-homebrew_cask_appdir: /Applications                         #homebrew cask install dir
+# homebrew cask install dir
+homebrew_cask_appdir: /Applications
 
-homebrew_use_brewfile: true                                 # use a brewfile to install homebrew packages and casks
+# use a brewfile to install homebrew packages and casks
+homebrew_use_brewfile: true
 homebrew_brewfile_dir: '~'
-```
 
+# remove the Hombrew cache after any new software is installed
+homebrew_clear_cache: false
+```
 
 
 
@@ -54,8 +66,8 @@ Including an example of how to use your role (for instance, with variables passe
 
 Dependencies
 ------------
-
 elliotweiser.osx-command-line-tools
+geerlingguy.homebrew
 
 
 License
