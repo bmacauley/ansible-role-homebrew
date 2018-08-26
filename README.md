@@ -8,7 +8,6 @@ Ansible role to install Homebrew on a Mac and to configure packages, taps, and c
 
 Requirements
 ------------
-
 None
 
 Role Variables
@@ -18,8 +17,8 @@ default values (see defaults/main.yml):
 ```
 homebrew_repo: https://github.com/Homebrew/brew             # homebrew github repo
 
-homebrew_prefix: /usr/local                                 
-homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"     
+homebrew_prefix: /usr/local
+homebrew_install_path: "{{ homebrew_prefix }}/Homebrew"
 homebrew_brew_bin_path: /usr/local/bin
 
 homebrew_installed_packages:                                # homebrew packages
@@ -56,7 +55,7 @@ Including an example of how to use your role (for instance, with variables passe
 Dependencies
 ------------
 
-None
+elliotweiser.osx-command-line-tools
 
 
 License
@@ -66,6 +65,7 @@ License
 
 Author 
 ------
+Heavily influenced by geerlingguy/ansible-role-homebrew
 
 [Brian Macauley](https://github.com/bmacauley)  
 bmacauley@deloitte.co.uk
